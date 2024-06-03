@@ -24,8 +24,8 @@ const TITLE_STYLE = {
     display: "inline"
 }
 const H1_STYLE = {
-    fontWeight: 500,
-    fontSize: "1.8rem",
+    fontWeight: 600,
+    fontSize: "1.5rem",
 }
 
 const WHITE_BG = {
@@ -33,11 +33,11 @@ const WHITE_BG = {
 }
 
 const H_STYLE = {
-    fontWeight: 500,
+    fontWeight: 570,
     overflowWrap: "break-word",
     wordWrap: "break-word",
     whiteSpace: "normal",
-    fontSize: "1.3rem",
+    fontSize: "1.2rem",
 }
 const H2_STYLE = {
     ...H_STYLE,
@@ -60,8 +60,8 @@ const TABLE_STYLE = {
     backgroundColor: COLORS.gray,
     tableLayout: 'fixed',
     border: 0,
-    paddingRight: "2rem",
-    paddingLeft: "2rem",
+    paddingRight: "5%",
+    paddingLeft: "5%",
 }
 const TBODY_STYLE = {
     backgroundColor: COLORS.white
@@ -72,17 +72,18 @@ const ADD_PADDING = {
 }
 
 const SECTION_STYLE_CSS = {
-    marginBottom: 14,
+    marginBottom: 22,
 }
 const BUTTON_STYLE = {
     fontWeight: "bold",
     borderRadius: 2,
     paddingTop: 8,
     paddingBottom: 8,
-    paddingLeft: 16,
-    paddingRight: 16,
+    paddingLeft: "1rem",
+    paddingRight: "1rem",
     marginTop: 24,
-    marginBottom: 24
+    marginBottom: 24,
+    fontSize: "1rem"
 }
 
 const ICONS_URL = {
@@ -95,7 +96,7 @@ const ICONS_URL = {
 
 const ICONS = {
     size: "w-4/6",
-    style:{ marginRight: 4}
+    style:{ paddingRight: 4 }
 }
 const IMAGE = {
     url: "https://image.s51.sfmc-content.com/lib/fe3411737364047c7d1474/m/1/e5a6d5a3-0e1a-430e-9965-8229ca24da80.jpg",
@@ -118,7 +119,10 @@ const  EmailBenefits = () =>  {
                             cellSpacing="0"
                             align="center"
                             width="100%"
-                            style={TABLE_STYLE}
+                            style={{
+                                ...TABLE_STYLE,
+                                background: "linear-gradient(to top, #FAFAFA, #FAFAFACC)",
+                            }}
                         >
                             <tbody>
                             <tr>
@@ -129,17 +133,17 @@ const  EmailBenefits = () =>  {
                                         ...WHITE_BG,
                                     }}
                                 >
-                                    <Heading style={{...ADD_PADDING, ...TITLE_STYLE}} className={"text-2xl md:text-4xl"}>
+                                    <Heading style={{...ADD_PADDING, ...TITLE_STYLE}} className={"md:text-4xl"}>
                                         <span style={{fontWeight: "normal"}}>{"hazel"}</span>
-                                        <span style={{color: COLORS.orange, fontWeight: "normal"}}>{"heart"}</span>
+                                        <span style={{color: COLORS.orange, fontWeight: "bold"}}>{"heart"}</span>
                                         <span style={{fontWeight: "bold"}}>{"wood"}</span>
                                     </Heading>
                                 </td>
-                                <td align={"right"} style={{...WHITE_BG, width: "18%",}} >
+                                <td align={"right"} style={{...WHITE_BG, width: "22%"}} >
                                     <Img
                                         src={`https://i.imgur.com/cIULQdK.png`}
                                         alt={"logo"}
-                                        className={"w-16 md:w-28"}
+                                        className={"w-14 md:w-28"}
                                     />
                                 </td>
                             </tr>
@@ -364,7 +368,6 @@ const  EmailBenefits = () =>  {
                                         <td align="center" valign="middle">
                                             <Button
                                                 href={"https://www.hazelheartwood.com/"}
-                                                className={"py-2 px-8 my-2 md:py-3 md:px-16 md:my-4"}
                                                 style={{
                                                     ...BUTTON_STYLE,
                                                     border: "4px solid #FF5900",
@@ -377,7 +380,7 @@ const  EmailBenefits = () =>  {
                                     </tr>
                                     <tr style={WHITE_BG}>
                                         <td align="center" valign="middle">
-                                            <div style={{fontWeight: "normal", fontSize: 16, marginBottom: 16,}}>
+                                            <div style={{fontWeight: "normal", fontSize: 16, marginBottom: 24}}>
                                             <a href="mailto:hello@hazelheartwood.com"  style={{ color: COLORS.black, textDecoration: "none"}}>
                                                 <span>{"contact us via: hello@hazel"}</span>
                                                 <span style={{color: COLORS.orange}}>{"heart"}</span>
@@ -391,7 +394,7 @@ const  EmailBenefits = () =>  {
                                             <Img
                                                 src={IMAGE.url}
                                                 width={IMAGE.style.width}
-                                                className={"pb-2 md:pb-8"}
+                                                className={"pb-4 md:pb-8"}
                                                 alt={"employees-group-photo"}
                                             />
                                         </td>
