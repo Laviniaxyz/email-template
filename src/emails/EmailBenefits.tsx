@@ -19,11 +19,11 @@ const COLORS = {
     white:"#FFFFFF"
 }
 
-const TITLE_STYLE_CSS = {
+const TITLE_STYLE = {
     fontSize: "1.6rem",
     display: "inline"
 }
-const H1_STYLE_CSS = {
+const H1_STYLE = {
     fontWeight: 500,
     fontSize: "1.8rem",
 }
@@ -31,39 +31,42 @@ const H1_STYLE_CSS = {
 const WHITE_BG = {
     backgroundColor: COLORS.white
 }
-const H2_STYLE_CSS = {
+
+const H_STYLE = {
+    fontWeight: 500,
     overflowWrap: "break-word",
     wordWrap: "break-word",
-    fontWeight: 500,
+    whiteSpace: "normal",
+    fontSize: "1.3rem",
+}
+const H2_STYLE = {
+    ...H_STYLE,
     marginBottom: "1rem",
-    fontSize: "1.3rem"
 }
 
-const H_STYLE_CSS = {
-    fontWeight: 500,
-    overflowWrap: "break-word",
-    wordWrap: "break-word",
-    fontSize: "1.3rem",
+const H2_STYLE_IN_SECTION = {
+    ...H_STYLE,
     marginBottom: "0.25rem"
 }
 
-const P_STYLE_CSS = {
+const P_STYLE = {
     overflowWrap: "break-word",
     wordWrap: "break-word",
+    whiteSpace: "normal",
     fontSize: "1rem"
 }
 
-const TABLE_STYLE_CSS = {
+const TABLE_STYLE = {
     backgroundColor: COLORS.gray,
     tableLayout: 'fixed',
     border: 0,
     paddingRight: "2rem",
-    paddingLeft: "2rem"
+    paddingLeft: "2rem",
 }
-const TBODY_STYLE_CSS = {
+const TBODY_STYLE = {
     backgroundColor: COLORS.white
 }
-const ADD_PADDING_CSS = {
+const ADD_PADDING = {
     paddingLeft: 16,
     paddingRight: 16
 }
@@ -71,7 +74,7 @@ const ADD_PADDING_CSS = {
 const SECTION_STYLE_CSS = {
     marginBottom: 14,
 }
-const BUTTON_STYLE_CSS = {
+const BUTTON_STYLE = {
     fontWeight: "bold",
     borderRadius: 2,
     paddingTop: 8,
@@ -91,8 +94,8 @@ const ICONS_URL = {
 }
 
 const ICONS = {
-    size: "w-4/6 md:w-6/6",
-    style:{ marginRight: 4, width: 60}
+    size: "w-4/6",
+    style:{ marginRight: 4}
 }
 const IMAGE = {
     url: "https://image.s51.sfmc-content.com/lib/fe3411737364047c7d1474/m/1/e5a6d5a3-0e1a-430e-9965-8229ca24da80.jpg",
@@ -108,14 +111,14 @@ const  EmailBenefits = () =>  {
                 </Head>
                     <Container
                         className={"w-full h-full"}
-                        style={{color: COLORS.black,}}
+                        style={{color: COLORS.black}}
                     >
                         <table
                             cellPadding="0"
                             cellSpacing="0"
                             align="center"
                             width="100%"
-                            style={TABLE_STYLE_CSS}
+                            style={TABLE_STYLE}
                         >
                             <tbody>
                             <tr>
@@ -126,17 +129,17 @@ const  EmailBenefits = () =>  {
                                         ...WHITE_BG,
                                     }}
                                 >
-                                    <Heading style={{...ADD_PADDING_CSS, ...TITLE_STYLE_CSS}}>
+                                    <Heading style={{...ADD_PADDING, ...TITLE_STYLE}} className={"text-2xl md:text-4xl"}>
                                         <span style={{fontWeight: "normal"}}>{"hazel"}</span>
                                         <span style={{color: COLORS.orange, fontWeight: "normal"}}>{"heart"}</span>
                                         <span style={{fontWeight: "bold"}}>{"wood"}</span>
                                     </Heading>
                                 </td>
-                                <td align={"right"} style={{...WHITE_BG, width: "12%",}} >
+                                <td align={"right"} style={{...WHITE_BG, width: "18%",}} >
                                     <Img
-                                        src={`https://i.imgur.com/vtKYTGu.png`}
+                                        src={`https://i.imgur.com/cIULQdK.png`}
                                         alt={"logo"}
-                                        className={"w-14 md:w-24"}
+                                        className={"w-16 md:w-28"}
                                     />
                                 </td>
                             </tr>
@@ -148,17 +151,17 @@ const  EmailBenefits = () =>  {
                                 cellSpacing="0"
                                 align="center"
                                 width="100%"
-                                style={TABLE_STYLE_CSS}
+                                style={TABLE_STYLE}
 
                             >
-                                <tbody style={TBODY_STYLE_CSS}>
+                                <tbody style={TBODY_STYLE}>
                                 <tr>
                                     <td align="left">
                                         <div
                                              style={{
                                                  color: COLORS.orange,
-                                                 ...H1_STYLE_CSS,
-                                                 ...ADD_PADDING_CSS
+                                                 ...H1_STYLE,
+                                                 ...ADD_PADDING
                                              }}>
                                             {"Email Marketing"}
                                         </div>
@@ -167,7 +170,7 @@ const  EmailBenefits = () =>  {
                                 <tr>
                                     <td align="left">
                                         <div
-                                            style={{...H2_STYLE_CSS, ...ADD_PADDING_CSS}}
+                                            style={{...H2_STYLE, ...ADD_PADDING}}
                                         >
                                             {"and Its Benefits for Small and Medium Business"}
                                         </div>
@@ -178,8 +181,8 @@ const  EmailBenefits = () =>  {
                                         <div
                                             style={{
                                                 marginBottom: 16,
-                                                ...ADD_PADDING_CSS,
-                                                ...P_STYLE_CSS
+                                                ...ADD_PADDING,
+                                                ...P_STYLE
                                         }}>
                                             {"Email marketing is a promotional method that involves sending emails to promote products. Communication and consumer trust are considered effective in building customer loyalty through this method"}
                                         </div>
@@ -188,7 +191,7 @@ const  EmailBenefits = () =>  {
                                 <tr>
                                     <td align="left">
                                         <div
-                                            style={{...P_STYLE_CSS, ...ADD_PADDING_CSS}}
+                                            style={{...P_STYLE, ...ADD_PADDING}}
                                         >
                                             {"If you're launching a business in this digital era, it seems necessary to think about using email, because it will bring you many benefits, such as:"}
                                         </div>
@@ -206,15 +209,15 @@ const  EmailBenefits = () =>  {
                                         backgroundColor: COLORS.gray,
                                         tableLayout: 'fixed',
                                         border: 0,
-                                        ...TABLE_STYLE_CSS
+                                        ...TABLE_STYLE
                                     }}>
-                                    <tbody style={TBODY_STYLE_CSS}>
+                                    <tbody style={TBODY_STYLE}>
                                     <tr>
                                         <td align="center" valign="middle">
                                             <Button
                                                 href={"https://www.hazelheartwood.com/the-veehof-practice"}
                                                 style={{
-                                                    ...BUTTON_STYLE_CSS,
+                                                    ...BUTTON_STYLE,
                                                     color: "#FFFFFF",
                                                     backgroundColor: "#FF5900",
                                                 }}>
@@ -231,41 +234,37 @@ const  EmailBenefits = () =>  {
                                     cellSpacing="0"
                                     align="center"
                                     width="100%"
-                                    style={TABLE_STYLE_CSS}
+                                    style={TABLE_STYLE}
                                 >
-                                    <tbody style={TBODY_STYLE_CSS}>
+                                    <tbody style={TBODY_STYLE}>
                                     <tr>
                                         <td>
                                             <Section
-                                                style={{...SECTION_STYLE_CSS, ...ADD_PADDING_CSS}}
+                                                style={{...SECTION_STYLE_CSS, ...ADD_PADDING}}
                                             >
                                                 <Row>
                                                     <Column style={ICONS.style}>
                                                         <Img
                                                             src={ICONS_URL.customer}
-                                                            width={ICONS.style.width}
                                                             className={ICONS.size}
                                                             alt={'customer-icon'}
                                                         />
                                                     </Column>
                                                     <Column className="w-4/5">
                                                         <div>
-                                                            <div style={H_STYLE_CSS}>Easier to Get Customer Data</div>
-                                                            <div style={P_STYLE_CSS}>
-                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                                Phasellus
-                                                                nibh sapien, porta sed nunc at, luctus sodales lectus.
+                                                            <div style={H2_STYLE_IN_SECTION}>Easier to Get Customer Data</div>
+                                                            <div style={P_STYLE}>
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nibh sapien, porta sed nunc at, luctus sodales lectus.
                                                             </div>
                                                         </div>
                                                     </Column>
                                                 </Row>
                                             </Section>
-                                            <Section style={{...SECTION_STYLE_CSS, ...ADD_PADDING_CSS}} >
+                                            <Section style={{...SECTION_STYLE_CSS, ...ADD_PADDING}} >
                                                 <Row>
                                                     <Column>
                                                         <Img
                                                             src={ICONS_URL.dialogue}
-                                                            width={ICONS.style.width}
                                                             className={ICONS.size}
                                                             alt={'dialogue-icon'}
 
@@ -273,88 +272,70 @@ const  EmailBenefits = () =>  {
                                                     </Column>
                                                     <Column className="w-4/5">
                                                         <div>
-                                                            <div style={H_STYLE_CSS}>
+                                                            <div style={H2_STYLE_IN_SECTION}>
                                                                 Communication with Customers Feels More Personal
                                                             </div>
-                                                            <div style={P_STYLE_CSS}>
-                                                                Mauris maximus id ex vel commodo. Maecenas pulvinar arcu
-                                                                augue, nec
-                                                                accumsan nisi lobortis id. Nulla eu iaculis est, sed
-                                                                blandit lorem.
-                                                                Vivamus nec lorem ligula.
+                                                            <div style={P_STYLE}>
+                                                                Mauris maximus id ex vel commodo. Maecenas pulvinar arcu augue, nec accumsan nisi lobortis id. Nulla eu iaculis est, sed blandit lorem. Vivamus nec lorem ligula.
                                                             </div>
                                                         </div>
                                                     </Column>
                                                 </Row>
                                             </Section>
-                                            <Section style={{...SECTION_STYLE_CSS, ...ADD_PADDING_CSS}}>
+                                            <Section style={{...SECTION_STYLE_CSS, ...ADD_PADDING}}>
                                                 <Row>
                                                     <Column style={ICONS.style}>
                                                         <Img
                                                             src={ICONS_URL.savings}
-                                                            width={ICONS.style.width}
-                                                            style={{width: "66%"}}
                                                             className={ICONS.size}
                                                             alt={'savings-icon'}
                                                         />
                                                     </Column>
                                                     <Column className="w-4/5">
                                                         <div>
-                                                            <div style={H_STYLE_CSS}>Save Money</div>
-                                                            <div style={P_STYLE_CSS}>Lorem ipsum dolor sit amet,
-                                                                consectetur
-                                                                adipiscing elit. Phasellus nibh sapien, porta sed nunc
-                                                                at, luctus
-                                                                sodales lectus.
+                                                            <div style={H2_STYLE_IN_SECTION}>Save Money</div>
+                                                            <div style={P_STYLE}>
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nibh sapien, porta sed nunc at, luctus sodales lectus.
                                                             </div>
                                                         </div>
                                                     </Column>
                                                 </Row>
                                             </Section>
-                                            <Section style={{...SECTION_STYLE_CSS, ...ADD_PADDING_CSS}}>
+                                            <Section style={{...SECTION_STYLE_CSS, ...ADD_PADDING}}>
                                                 <Row>
                                                     <Column style={ICONS.style}>
                                                         <Img
                                                             src={ICONS_URL.okay}
-                                                            width={ICONS.style.width}
                                                             className={ICONS.size}
                                                             alt={'okay-icon'}
                                                         />
                                                     </Column>
                                                     <Column className="w-4/5">
                                                         <div>
-                                                            <div style={H_STYLE_CSS}>
+                                                            <div style={H2_STYLE_IN_SECTION}>
                                                                 Easy to Evaluate
                                                             </div>
-                                                            <div style={P_STYLE_CSS}>
-                                                                Mauris maximus id ex vel commodo. Maecenas pulvinar arcu
-                                                                augue, nec
-                                                                accumsan nisi lobortis id. Nulla eu iaculis est, sed
-                                                                blandit lorem.
-                                                                Vivamus nec lorem ligula.
+                                                            <div style={P_STYLE}>
+                                                                Mauris maximus id ex vel commodo. Maecenas pulvinar arcu augue, nec accumsan nisi lobortis id. Nulla eu iaculis est, sed blandit lorem. Vivamus nec lorem ligula.
                                                             </div>
                                                         </div>
                                                     </Column>
                                                 </Row>
                                             </Section>
-                                            <Section style={{...SECTION_STYLE_CSS, ...ADD_PADDING_CSS}}>
+                                            <Section style={{...SECTION_STYLE_CSS, ...ADD_PADDING}}>
                                                 <Row>
                                                     <Column style={ICONS.style}>
                                                         <Img
                                                             src={ICONS_URL.medal}
-                                                            width={ICONS.style.width}
                                                             className={ICONS.size}
                                                             alt={'medal-icon'}
-
                                                         />
                                                     </Column>
                                                     <Column className="w-4/5">
                                                         <div>
-                                                            <div style={H_STYLE_CSS}>Build Credibility</div>
-                                                            <div style={P_STYLE_CSS}>
-                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                                Phasellus
-                                                                nibh sapien, porta sed nunc at, luctus sodales lectus.
+                                                            <div style={H2_STYLE_IN_SECTION}>Build Credibility</div>
+                                                            <div style={P_STYLE}>
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nibh sapien, porta sed nunc at, luctus sodales lectus.
                                                             </div>
                                                         </div>
                                                     </Column>
@@ -375,7 +356,8 @@ const  EmailBenefits = () =>  {
                                         backgroundImage: "url('https://i.imgur.com/ZAwVVx6.png')",
                                         backgroundPosition: "center",
                                         backgroundRepeat: "no-repeat",
-                                        ...TABLE_STYLE_CSS
+                                        paddingBottom: "2rem",
+                                        ...TABLE_STYLE
                                     }}>
                                     <tbody style={WHITE_BG}>
                                     <tr style={WHITE_BG}>
@@ -384,7 +366,7 @@ const  EmailBenefits = () =>  {
                                                 href={"https://www.hazelheartwood.com/"}
                                                 className={"py-2 px-8 my-2 md:py-3 md:px-16 md:my-4"}
                                                 style={{
-                                                    ...BUTTON_STYLE_CSS,
+                                                    ...BUTTON_STYLE,
                                                     border: "4px solid #FF5900",
                                                     color: COLORS.black,
 
