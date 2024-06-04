@@ -8,7 +8,6 @@ import {
     Html, Img, Row,
     Section,
     Tailwind,
-    Text,
 } from "@react-email/components";
 import * as React from "react";
 
@@ -143,7 +142,7 @@ const  EmailBenefits = () =>  {
                                     <Img
                                         src={`https://i.imgur.com/cIULQdK.png`}
                                         alt={"logo"}
-                                        className={"w-14 md:w-28"}
+                                        className={"w-16 md:w-28"}
                                     />
                                 </td>
                             </tr>
